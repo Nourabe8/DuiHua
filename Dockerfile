@@ -1,8 +1,8 @@
 FROM maven:3.8.6-openjdk-11
-ENV DB_URL=loclhost
+ENV DB_URL=duihua-db.cxdxuohuonzo.us-east-1.rds.amazonaws.com
 ENV DB_NAME=DuiHua
 ENV DB_USENAME=root
-ENV DB_PASSWORD=DuiHua@2022
+ENV DB_PASSWORD=DuiHua2022
 ENV DB_PORT=3306
 WORKDIR /app
 ADD pom.xml .
