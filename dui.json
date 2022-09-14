@@ -1,0 +1,21 @@
+{
+
+    "AWSEBDockerrunVersion": "1",
+
+    "Image": {
+
+      "Name": "registry.hub.docker.com/nourab/dui”
+
+    },
+
+    "Ports": [
+
+      {
+
+        "ContainerPort": 80
+
+      }
+
+    ]
+
+  }
