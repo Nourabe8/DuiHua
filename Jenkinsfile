@@ -3,8 +3,8 @@ pipeline {
 	agent any
 
 	environment {
-		AWS_ACCESS_KEY_ID     = credentials('AccesskeyID')
-  		AWS_SECRET_ACCESS_KEY = credentials('Secretaccesskey')
+		AWS_ACCESS_KEY_ID     = credentials('Access-key-ID')
+  		AWS_SECRET_ACCESS_KEY = credentials('Secret-access-key')
 		ARTIFACT_NAME = 'dui.json'
 		AWS_S3_BUCKET = 'finalproject-duihua'
 		AWS_EB_APP_NAME = 'FinalProject-DuiHua'
