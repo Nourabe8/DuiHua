@@ -3,8 +3,9 @@ pipeline {
 	agent any
 
 	environment {
-		AWS_ACCESS_KEY_ID     = credentials('Access_key_ID')
-  		AWS_SECRET_ACCESS_KEY = credentials('Secret_access_key')
+		OCKERHUB_CREDENTIALS=credentials('NouraAlotaibi-dockerhub-token')
+		AWS_ACCESS_KEY_ID     = credentials('NouraAlotaibi-aws-secret-key-id')
+  		AWS_SECRET_ACCESS_KEY = credentials('NouraAlotaibi-aws-secret-access-key')
 		ARTIFACT_NAME = 'dui.json'
 		AWS_S3_BUCKET = 'finalproject-duihua'
 		AWS_EB_APP_NAME = 'FinalProject-DuiHua'
