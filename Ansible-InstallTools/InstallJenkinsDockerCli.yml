@@ -1,0 +1,8 @@
+- name: Copy our executable script to remote location, execute script.
+  remote_user: root
+  hosts: Install
+  tasks:
+     - name: Transfer executable script script
+       copy: src=./docker-awcli-jenkins.sh dest=/home/ubuntu mode=0777
+     - name: Execute the script
+       command: /home/ubuntu/docker-awcli-jenkins.sh
