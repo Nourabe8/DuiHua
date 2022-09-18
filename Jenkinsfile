@@ -17,7 +17,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t nourab/duihua .'
+				sh 'docker build -t dohahq/duihua:3.0 .'
 			}
 		}
 
@@ -31,7 +31,7 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker push nourab/duihua'
+				sh 'docker push dohahq/duihua:3.0'
 			}
 		}
 
