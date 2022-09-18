@@ -3,6 +3,7 @@ pipeline {
 	agent any
 
 	environment {
+		DOCKERHUB_CREDENTIALS=credentials('token')
 		AWS_ACCESS_KEY_ID     = credentials('Access-key-ID')
   		AWS_SECRET_ACCESS_KEY = credentials('Secret-access-key')
 		ARTIFACT_NAME = 'dui.json'
