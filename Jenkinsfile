@@ -3,9 +3,8 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('belt-token')
-		AWS_ACCESS_KEY_ID     = credentials('Access_key_ID')
-  		AWS_SECRET_ACCESS_KEY = credentials('Secret_access_key')
+		AWS_ACCESS_KEY_ID     = credentials('Access-key-ID')
+  		AWS_SECRET_ACCESS_KEY = credentials('Secret-access-key')
 		ARTIFACT_NAME = 'dui.json'
 		AWS_S3_BUCKET = 'finalproject-duihua'
 		AWS_EB_APP_NAME = 'FinalProject-DuiHua'
@@ -18,7 +17,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t nourab/duihua .'
+				sh 'docker build -t dohahq/duihua:3.0 .'
 			}
 		}
 
@@ -32,7 +31,7 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker push nourab/duihua'
+				sh 'docker push dohahq/duihua:3.0'
 			}
 		}
 
